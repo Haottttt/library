@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+--
+-- Host: localhost    Database: pr
+-- ------------------------------------------------------
+-- Server version	8.0.34
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `pr_user`
+--
+
+DROP TABLE IF EXISTS `pr_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pr_user` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Region_code` varchar(6) DEFAULT NULL,
+  `Phone` varchar(11) DEFAULT NULL,
+  `Create_time` timestamp NULL DEFAULT NULL,
+  `Username` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
+  `role` varchar(50) DEFAULT 'reader',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pr_user`
+--
+
+LOCK TABLES `pr_user` WRITE;
+/*!40000 ALTER TABLE `pr_user` DISABLE KEYS */;
+INSERT INTO `pr_user` VALUES (1,NULL,NULL,'2024-06-02 03:50:32','www','$2a$10$pbw2ZDKqSjUshlJ0gwgBC.6Dw8wNmYcoFIVt4bQqBzO4n6C4y2632','reader'),(2,NULL,'','2024-06-02 04:15:57','ll','$2a$10$V1gOCZxx1nDSpQKYvuARYeS3mwX5BjAaKl0Bvhj3xJ.ceKRgZ9eh6','reader'),(3,NULL,'','2024-06-03 12:42:15','wwww','$2a$10$2eDRBXJ3gYSFcQa.b4voVO2LZyF12MpAIVVnIfF35Q7ZbA69W9wC.','reader'),(4,NULL,'18050286395','2024-06-02 05:10:08','hys','$2a$10$7ZwvSrw9Q1jNejgEbF42De9zqO.I7gR0N6RyVA3busuUy8/DdxUim','reader'),(5,NULL,'','2024-06-02 05:29:11','thx','$2a$10$V5sT3gHajfyOdfUNa5Wome8K7fqhRoZ4wM3NUh/NDjOCivVDdh7C6','reader'),(6,'123456','12345678901','2024-06-03 12:42:02','admin','$2a$10$eB7vq3ls.5LrM4MhsZpNoOeN3Wy8MV.g9NTueLVU1dFSX1.wR6b7a','admin'),(7,'123456','12345678902','2024-06-03 12:42:02','user1','$2a$10$eB7vq3ls.5LrM4MhsZpNoOeN3Wy8MV.g9NTueLVU1dFSX1.wR6b7a','reader'),(8,'123456','12345678901','2024-06-03 12:43:10','admin','$2a$10$eB7vq3ls.5LrM4MhsZpNoOeN3Wy8MV.g9NTueLVU1dFSX1.wR6b7a','admin'),(9,'123456','12345678902','2024-06-03 12:43:10','user1','$2a$10$eB7vq3ls.5LrM4MhsZpNoOeN3Wy8MV.g9NTueLVU1dFSX1.wR6b7a','reader');
+/*!40000 ALTER TABLE `pr_user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-11-28 10:25:21
